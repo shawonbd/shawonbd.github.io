@@ -266,6 +266,9 @@ loadCSS("https://use.fontawesome.com/releases/v5.1.0/css/all.css");loadCSS("http
 </clipPath>
 </svg>
 	<!-- JavaScripts -->
+<script>
+$("#switch-mode").click(function(){$.cookie("night-mode")?$.removeCookie("night-mode",{path:"/"}):$.cookie("night-mode",1,{expires:365,path:"/"}),location.reload()}),$.cookie("night-mode")&&$("#switch-mode").addClass("active");
+	</script>
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
 	<script src="assets/js/plugins.js"></script>
 	<script src="assets/js/common.js"></script>
