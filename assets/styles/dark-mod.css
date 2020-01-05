@@ -444,7 +444,7 @@ select option,
   background: #272333 !important;
 }
 .footer a {text-decoration: none;}
-html,body{cursor:url("assets/images/cursor.png"), auto;}
-a:hover{cursor:url("assets/images/hover.png"), auto;}
+html,body{cursor:url("/assets/images/cursor.png"), auto;}
+a:hover{cursor:url("/assets/images/hover.png"), auto;}
 
 /*# sourceMappingURL=style-dark.css.map */
