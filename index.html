@@ -43,11 +43,11 @@ loadCSS("https://use.fontawesome.com/releases/v5.1.0/css/all.css");loadCSS("http
 </script>
 </head>
 <body class="bg-triangles">
-<div id="switch-mode">
-    <div class="sm-icon"><i class="fa fa-moon-o"></i></div>
-    <div class="sm-button"><span></span></div>
-</div>
 	
+<label class='switch'>
+<input type='checkbox'/>
+<span class='toggle-light slider'></span>
+</label>
 	
     <!-- Preloader -->
     <div class="preloader">
@@ -248,7 +248,7 @@ loadCSS("https://use.fontawesome.com/releases/v5.1.0/css/all.css");loadCSS("http
 </div>
 					
 					<!-- Footer -->
-					<footer class="footer">Copyright© <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> Designed By <i class='fa fa-heart' style='color:#ff695d;'></i> <a href="https://www.facebook.com/Shawon.khan123">Shawon Khan</a><i class="fa fa-check-circle" style="color: #118ff9;" title="Verified Author"></i></footer>
+					<footer class="footer">Copyright © <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> Designed By <i class='fa fa-heart' style='color:#ff695d;'></i> <a href="https://www.facebook.com/Shawon.khan123">Shawon Khan</a><i class="fa fa-check-circle" style="color: #118ff9;" title="Verified Author"></i></footer>
 		        </div>
 			</div>
 		</div>
@@ -267,8 +267,27 @@ loadCSS("https://use.fontawesome.com/releases/v5.1.0/css/all.css");loadCSS("http
 </svg>
 	<!-- JavaScripts -->
 <script>
-$("#switch-mode").click(function(){$.cookie("night-mode")?$.removeCookie("night-mode",{path:"/"}):$.cookie("night-mode",1,{expires:365,path:"/"}),location.reload()}),$.cookie("night-mode")&&$("#switch-mode").addClass("active");
-	</script>
+  $(document).ready(function() {
+      $(".toggle-light").click(function() {
+        $("body").toggleClass("night-mode");
+        $(".slider").toggleClass("checked");
+        if ($("body").hasClass("night-mode")) {
+          localStorage.setItem("nightmode", "true");
+        } else {
+          localStorage.setItem("nightmode", "false");
+        }
+      });
+      var local_Storage = localStorage.getItem("nightmode");
+      if (local_Storage == "true") {
+        $("body").addClass("night-mode");
+        $(".slider").addClass("checked");
+      } else {
+        $("body").removeClass("night-mode");
+        $(".slider").removeClass("checked");
+      }
+       
+    })
+</script>
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
 	<script src="assets/js/plugins.js"></script>
 	<script src="assets/js/common.js"></script>
