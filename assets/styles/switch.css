@@ -1,1 +1,9 @@
-#switch-mode{position:fixed;top:48%;left:0;width:50px;text-align:center;z-index:9999;cursor:pointer;background:rgba(0,0,0,.8);border-radius:0 3px 3px 0;padding:5px}#switch-mode .sm-icon{color:#fff}#switch-mode .sm-text{font-size:9px;color:#aaa;text-transform:uppercase;line-height:1.1em;display:block;margin:2px 0}#switch-mode .sm-button{overflow:hidden;width:60%;margin:8px auto;position:relative;border-radius:20px;background:#555;height:10px}#switch-mode .sm-button span{display:inline-block;width:10px;height:10px;border-radius:50%;background:#888;position:absolute;top:0;left:0}#switch-mode.active .sm-button span{background:#79c143;left:auto;right:0}#switch-mode.active .sm-button{background:#333}
+.switch{position:fixed;z-index:1993;top:90px;left:10px;
+position:relative;display:inline-block;width:40px;height:16px;float:left;margin:17px 0}
+.switch input{opacity:0;width:0;height:0;outline:0}
+.slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ddd;-webkit-transiton:.4s;transition:.4s;border-radius:34px}
+.slider:before{position:absolute;content:"";height:20px;width:20px;left:0;bottom:-2px;background-color:#aaa;box-shadow:0 0 1px #aaa;-webkit-transition:.4s;transition:.4s;border-radius:50%}
+.slider.checked{background-color:#3c4043}
+.slider.checked:before{-webkit-transform:translateX(20px);-ms-transform:translateX(20px);transform:translateX(20px)}
+svg{height:24px;width:24px;min-width:24px;vertical-align:text-bottom}
+svg{fill:#aaa}
