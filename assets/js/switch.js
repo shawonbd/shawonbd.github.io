@@ -18,7 +18,7 @@
     $(this).addClass('closed');
     $(this).removeClass('open');
     $('.styleswitcher').animate({
-     'left': '-130px'
+     'left': '-70px'
     });
    } else {
     $(this).addClass('open');
