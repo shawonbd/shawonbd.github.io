@@ -31,6 +31,7 @@
 	<link rel="apple-touch-icon" sizes="57x57" href="#">
 	<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
     <!-- Styles -->
+	  <link rel="stylesheet" href="//onface.github.io/font-awesome/assets/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/demo/style-demo.css">
 	<link class='alt' rel="stylesheet" type="text/css" href="assets/styles/dark-mod.css">
@@ -111,11 +112,11 @@ loadCSS("https://use.fontawesome.com/releases/v5.1.0/css/all.css");loadCSS("http
 						</div>
 						<div class="inner-menu js-menu">
 						   <ul class='nav'>
-                            <li class='nav__item'><a class='active' href='#'>About</a></li>
-                            <li class='nav__item'><a class='active' href='#'>Resume</a></li>
-                            <li class='nav__item'><a class='active' href='#'>Website</a></li>
-                            <li class='nav__item'><a class='active' href='#'>Blog</a></li>
-                             <li class='nav__item'><a class='active' href='https://www.facebook.com/shawon.khan123'>Contact</a></li>
+                            <li class='nav__item'><a class='active' href='#' onclick='clicksound.playclip()'><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li>
+                            <li class='nav__item'><a class='active' href='#' onclick='clicksound.playclip()'><i class="fa fa-user" aria-hidden="true"></i> Resume</a></li>
+                            <li class='nav__item'><a class='active' href='#' onclick='clicksound.playclip()'><i class="fa fa-snowflake-o" aria-hidden="true"></i> Website</a></li>
+                            <li class='nav__item'><a class='active' href='#' onclick='clicksound.playclip()'><i class="fa fa-rss-square" aria-hidden="true"></i> Blog</a></li>
+                             <li class='nav__item'><a class='active' href='https://www.facebook.com/shawon.khan123'><i class="fa fa-phone-square" aria-hidden="true"></i> Contact</a></li>
 </ul>
 						</div>
 					    <!-- About -->
@@ -264,16 +265,20 @@ loadCSS("https://use.fontawesome.com/releases/v5.1.0/css/all.css");loadCSS("http
 
 <!-- Style Switcher Start -->
 <div class='styleswitcher'>
-<div class='arrow-box'><a class='switch-button open'><i class='fa fa-caret-right'></i></a></div>
+<div class='arrow-box'><a class='switch-button open' onclick='clicksound.playclip()'><i class='fa fa-caret-right'></i></a></div>
 <h3 style="font-size:14px">Color</h3>
 <ul class='color-scheme'>
-<li><a class='white-theme' href='#' rel='/assets/styles/style.css'></a></li>
-<li><a class='black-theme' href='#' rel='assets/styles/dark-mod.css'></a></li>
+<li><a class='white-theme' onclick='clicksound.playclip()' href='#' rel='/assets/styles/style.css'></a></li>
+<li><a class='black-theme' onclick='clicksound.playclip()' href='#' rel='assets/styles/dark-mod.css'></a></li>
 </ul>
 </div>
 <!-- Style Switcher Start -->
 
-
+<script type='text/javascript'>
+//<![CDATA[
+function createsoundbite(e){var t=document.createElement("audio");if(t.canPlayType){for(var n=0;n<arguments.length;n++){var r=document.createElement("source");r.setAttribute("src",arguments[n]);if(arguments[n].match(/\.(\w+)$/i))r.setAttribute("type",html5_audiotypes[RegExp.$1]);t.appendChild(r)}t.load();t.playclip=function(){t.pause();t.currentTime=0;t.play()};return t}else{return{playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}}}var html5_audiotypes={mp3:"audio/mpeg",mp4:"audio/mp4",ogg:"audio/ogg",wav:"audio/wav"};var mouseoversound=createsoundbite("https://sites.google.com/site/binkbenk77/hoversound.ogg");var clicksound=createsoundbite("https://sites.google.com/site/binkbenk77/clicksound.ogg");
+//]]>
+</script>
         <script src="assets/js/switch.js"></script>
 	<script src="assets/js/plugins.js"></script>
 	<script src="assets/js/common.js"></script>
